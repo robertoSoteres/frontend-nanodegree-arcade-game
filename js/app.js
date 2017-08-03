@@ -36,7 +36,6 @@ Enemy.prototype.update = function(dt) {
         {
             player.prototype.x = 200;
             player.prototype.y = 400;
-            prueba commit dsd web
         }*/
 };
 
