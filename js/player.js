@@ -6,8 +6,7 @@ var player = function(x, y) {
     this.x = x;
     this.y = y;
     this.score = 0;
-    this.sprite = 'images/char-horn-girl.png';
-    this.playerList = ['images/char-cat-girl.png', 'images/char-horn-girl.png', 'images/char-boy.png', 'images/char-pink-girl.png', 'images/char-princess-girl.png'];
+    this.sprite = 'images/enemy-bug.png';    
 };
 
 player.prototype.update = function() {
