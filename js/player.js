@@ -57,14 +57,14 @@ player.prototype.handleInput = function(allowedKey) {
 player.prototype.reset = function() {
     //reset player position
     player.x = 200;
-    player.y = 400;    
+    player.y = 400;
     //reset score
     this.score = 0;
 };
 
 player.prototype.addPoints = function(){
     // Add 100 points to the player score
-    this.score += 100;    
+    this.score += 100;
     // clear a rectangle over the score text
     ctx.clearRect(1, 580, 600, 20); 
 };
