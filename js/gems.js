@@ -6,7 +6,7 @@ var gems = function(){
     this.y = y;
     //Gem speed
     this.speed = 50 + Math.floor(Math.random() * 150);
-    //Gem image    
+    //Gem image
     var z = Math.floor(Math.random() * 3);
     this.sprite = gemList[z];
 };

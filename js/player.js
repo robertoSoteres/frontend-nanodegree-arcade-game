@@ -6,7 +6,7 @@ var player = function(x, y) {
     this.x = x;
     this.y = y;
     this.score = 0;
-    this.sprite = 'images/enemy-bug.png';    
+    this.sprite = 'images/enemy-bug.png';
 };
 
 player.prototype.update = function() {
