@@ -45,7 +45,7 @@ Enemy.prototype.render = function() {
 
 
 var allEnemies =[]; 
-for(var i = 0; i<numEnemies; i++){
+for(var i = 0; i<totalEnemies; i++){
     var enemy = new Enemy();
     // Place all enemy objects in an array called allGems
     allEnemies.push(enemy);

@@ -31,7 +31,7 @@ gems.prototype.render = function() {
 };
 // Instantiate the objects.
 var allGems =[]; 
-for(var i = 0; i<numGems; i++){
+for(var i = 0; i<totalGems; i++){
     var gem = new gems();
     // Place all gems objects in an array called allGems
     allGems.push(gem);
