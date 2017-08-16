@@ -6,7 +6,7 @@ var Enemy = function() {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     var z = Math.floor(Math.random() * 5);
-    this.sprite = playerList[z];
+    this.sprite = enemiesList[z];
 
     //Setting the Enemy initial location (you need to implement)
     var x = Math.floor(Math.random() * - 250);

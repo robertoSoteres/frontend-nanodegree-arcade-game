@@ -22,8 +22,7 @@ player.prototype.update = function() {
     if (this.y < 35) {
         this.y = 400;
         this.x = 200;
-        player.addPoints();
-        
+        player.addPoints();        
     }
 };
 
@@ -39,16 +38,16 @@ player.prototype.render = function() {
 player.prototype.handleInput = function(allowedKey) {
     switch (allowedKey) {
         case 'up':
-            this.y -= 83;
+            this.y -= upDown;
             break;
         case 'down':
-            this.y += 83;
+            this.y += upDown;
             break;
         case 'left':
-            this.x -= 101;
+            this.x -= leftRight;
             break;
         case 'right':
-            this.x += 101;
+            this.x += leftRight;
             break;
     }
 };
