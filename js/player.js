@@ -30,11 +30,13 @@ player.prototype.update = function() {
 
 player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    ctx.fillText("Score: "+ player.score, 10, 575); // re-draw the score text
+    // re-draw the score text
+    ctx.fillText("Score: "+ player.score, 10, 575);
     ctx.font='20px Verdana';
     ctx.fillStyle='white';
 };
 
+//move the player
 player.prototype.handleInput = function(allowedKey) {
     switch (allowedKey) {
         case 'up':
@@ -55,8 +57,7 @@ player.prototype.handleInput = function(allowedKey) {
 player.prototype.reset = function() {
     //reset player position
     player.x = 200;
-    player.y = 400;
-    
+    player.y = 400;    
     //reset score
     this.score = 0;
 };

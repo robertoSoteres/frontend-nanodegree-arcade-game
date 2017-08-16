@@ -1,8 +1,13 @@
 var gems = function(x,y){
+    //Gems speed
     this.speed = 50 + Math.floor(Math.random() * 150);
+    //Gems image
     this.sprite = 'images/Gem_Orange.png';
+    this.gemList = ['Gem_Blue.png', 'Gem_Green.png', 'Gem_Orange.png'];
+    //Gems location
     this.x = x;
     this.y = y;
+    
 };
 
 gems.prototype.update = function(dt) {
@@ -19,12 +24,13 @@ gems.prototype.update = function(dt) {
         };
     }
 };
-
+// Draw the gems on the screen
 gems.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-
-var gem1 = new gems(100, 60);
-var gem2 = new gems(0, 234);
-var gem3 = new gems(300, 145);
+// Instantiate the objects.
+var gem1 = new gems(400, 60);
+var gem2 = new gems(150, 234);
+var gem3 = new gems(200, 145);
+// Place all gems objects in an array called allGems
 var allGems = [gem1, gem2, gem3];
