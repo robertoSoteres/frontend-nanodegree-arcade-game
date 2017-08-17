@@ -21,7 +21,7 @@ gems.prototype.update = function(dt) {
     for (var i = 0; i < allGems.length; i++) {
         if (player.x < allGems[i].x + 75 && player.x + 65 > allGems[i].x && player.y < allGems[i].y + 50 && 70 + player.y > allGems[i].y) {
             player.score += 50;
-            this.x = 1;
+             allGems[i].x = 1;
         };
     }
 };
