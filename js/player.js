@@ -9,6 +9,7 @@ var player = function(x, y) {
     this.sprite = 'images/enemy-bug.png';
 };
 
+// update the location
 player.prototype.update = function() {
     if (this.x > 402) {
         this.x = 402;
@@ -52,6 +53,7 @@ player.prototype.handleInput = function(allowedKey) {
     }
 };
 
+//when the player and the enemies have a collision
 player.prototype.reset = function() {
     //reset player position
     player.x = 200;
@@ -60,9 +62,11 @@ player.prototype.reset = function() {
     this.score = 0;
 };
 
+// Add points to the score
 player.prototype.addPoints = function(){
     // Add 100 points to the player score
     this.score += 100;
+    totalEnemies += 1;
     // clear a rectangle over the score text
     ctx.clearRect(1, 580, 600, 20); 
 };

@@ -43,7 +43,7 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-
+//Add enemies
 var allEnemies =[]; 
 for(var i = 0; i<totalEnemies; i++){
     var enemy = new Enemy();
