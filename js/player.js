@@ -66,7 +66,6 @@ Player.prototype.reset = function() {
 Player.prototype.addPoints = function(){
     // Add 100 points to the Player score
     this.score += 100;
-    totalEnemies += 1;
     // clear a rectangle over the score text
     ctx.clearRect(1, 580, 600, 20); 
 };
