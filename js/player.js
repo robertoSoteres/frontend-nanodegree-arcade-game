@@ -1,7 +1,7 @@
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var player = function(x, y) {
+var Player = function(x, y) {
     this.speed = 100;
     this.x = x;
     this.y = y;
@@ -10,7 +10,7 @@ var player = function(x, y) {
 };
 
 // update the location
-player.prototype.update = function() {
+Player.prototype.update = function() {
     if (this.x > 402) {
         this.x = 402;
     }
@@ -23,20 +23,20 @@ player.prototype.update = function() {
     if (this.y < 35) {
         this.y = 400;
         this.x = 200;
-        player.addPoints();        
+        this.addPoints();        
     }
 };
 
-player.prototype.render = function() {
+Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     // re-draw the score text
-    ctx.fillText("Score: "+ player.score, 10, 575);
+    ctx.fillText("Score: "+ this.score, 10, 575);
     ctx.font='20px Verdana';
     ctx.fillStyle='white';
 };
 
-//move the player
-player.prototype.handleInput = function(allowedKey) {
+//move the Player
+Player.prototype.handleInput = function(allowedKey) {
     switch (allowedKey) {
         case 'up':
             this.y -= upDown;
@@ -53,18 +53,18 @@ player.prototype.handleInput = function(allowedKey) {
     }
 };
 
-//when the player and the enemies have a collision
-player.prototype.reset = function() {
-    //reset player position
-    player.x = 200;
-    player.y = 400;
+//when the Player and the enemies have a collision
+Player.prototype.reset = function() {
+    //reset Player position
+    this.x = 200;
+    this.y = 400;
     //reset score
     this.score = 0;
 };
 
 // Add points to the score
-player.prototype.addPoints = function(){
-    // Add 100 points to the player score
+Player.prototype.addPoints = function(){
+    // Add 100 points to the Player score
     this.score += 100;
     totalEnemies += 1;
     // clear a rectangle over the score text
@@ -72,5 +72,5 @@ player.prototype.addPoints = function(){
 };
 
 
-// Place the player object in a variable called player
-var player = new player(200, 400);
+// Place the Player object in a variable called player
+var player = new Player(200, 400);
