@@ -6,11 +6,11 @@ var Enemy = function() {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     var z = Math.floor(Math.random() * 5);
-    this.sprite = enemiesList[z];
+    this.sprite = ENEMIES_LIST[z];
 
     //Setting the Enemy initial location (you need to implement)
     var x = Math.floor(Math.random() * - 250);
-    var y = yPosition[Math.floor(Math.random() * 3)];
+    var y = Y_POSITION[Math.floor(Math.random() * 3)];
     this.x = x;
     this.y = y;
 
@@ -31,11 +31,10 @@ Enemy.prototype.update = function(dt) {
     }
 
     // Control the collision of the bug with the player
-    for (var i = 0; i < allEnemies.length; i++) {
-        if (player.x < allEnemies[i].x + 75 && player.x + 65 > allEnemies[i].x && player.y < allEnemies[i].y + 50 && 70 + player.y > allEnemies[i].y) {
-            player.reset();
-        };
+    if (player.x < this.x + 75 && player.x + 65 > this.x && player.y < this.y + 50 && 70 + player.y > this.y) {
+        player.reset();
     }
+
 };
 
 // Draw the enemy on the screen, required method for game
@@ -45,7 +44,7 @@ Enemy.prototype.render = function() {
 
 //Add enemies
 var allEnemies =[]; 
-for(var i = 0; i<totalEnemies; i++){
+for(var i = 0; i<TOTAL_ENEMIES; i++){
     var enemy = new Enemy();
     // Place all enemy objects in an array called allGems
     allEnemies.push(enemy);
